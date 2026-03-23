@@ -138,7 +138,7 @@
   {#if step === 2}
     <div class="card">
       <h2>参加者入力</h2>
-      <p>参加者の名前・所属・HDCP を入力してください。</p>
+      <p>参加者の名前・HDCP を入力してください。</p>
       <div class="table">
         <div class="header">
           <div>No</div><div>名前</div><!--<div>所属</div>--><div>HDCP</div>
@@ -164,6 +164,7 @@
   {#if step === 3}
     <div class="card">
       <h2>Final Lineup</h2>
+      <p>タップで入れ替え可能です。</p>
 
       <!-- ★ キャプチャ対象（h1 を除いてここだけ保存） -->
       <div class="capture-area" bind:this={captureTarget}>
