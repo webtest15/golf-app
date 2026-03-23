@@ -186,18 +186,25 @@
                 {#each group as p, pIndex}
                   <li
                     class:selected={selected && selected.gIndex === gIndex && selected.pIndex === pIndex}
-                    on:click={(e) => { e.stopPropagation(); onPersonClick(gIndex, pIndex); }}
+                    on:click={(e) => { 
+                      e.stopPropagation(); 
+                      onPersonClick(gIndex, pIndex); 
+                    }}
                   >
-                    {p.name || `No.${p.no}`}（{p.hdcp}）
+                    {p.name || `No.${p.no}`}（HDCP {p.hdcp}）
                   </li>
                 {/each}
 
-                {#if group.length < 4}
+                <!-- ★ 足りない人数ぶんだけ追加枠を表示（最大4枠） -->
+                {#each Array(Math.max(0, 4 - group.length)) as _, slotIndex}
                   <li class="empty-slot"
-                      on:click={(e) => { e.stopPropagation(); onEmptySlotClick(gIndex); }}>
+                      on:click={(e) => { 
+                        e.stopPropagation(); 
+                        onEmptySlotClick(gIndex); 
+                      }}>
                     ＋ 追加枠
                   </li>
-                {/if}
+                {/each}
               </ul>
             </div>
           {/each}
