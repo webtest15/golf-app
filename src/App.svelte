@@ -163,7 +163,7 @@
   <!-- STEP 3：組み合わせ結果 -->
   {#if step === 3}
     <div class="card">
-      <h2>組み合わせ表の完成！</h2>
+      <h2>Final Lineup</h2>
 
       <!-- ★ キャプチャ対象（h1 を除いてここだけ保存） -->
       <div class="capture-area" bind:this={captureTarget}>
@@ -240,7 +240,7 @@
   }
 
   @media (max-width: 600px) {
-    .card { width: 80%; margin: 0 auto; }
+    .card { width: 90%; margin: 0 auto; padding: 28px 8px 28px 8px;}
   }
 
   h2 {
@@ -425,6 +425,5 @@
     background: #ccc;
     cursor: not-allowed;
   }
-
 
 </style>
