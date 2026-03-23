@@ -118,7 +118,7 @@
 </script>
 
 <main>
-  <h1>test</h1>
+  <h1 class="title">Tee Sheet Builder</h1>
 
   <!-- STEP 1：人数選択 -->
   {#if step === 1}
@@ -230,10 +230,13 @@
   }
 
   h1 {
-    margin-bottom: 28px;
-    font-size: 26px;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: 900;
+    font-style: italic;
+    color: #2e8b57;
     text-align: center;
+    margin-bottom: 28px;
+    letter-spacing: 1px;
   }
 
   .card {
